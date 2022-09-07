@@ -4,6 +4,7 @@
   const styleColor="color:blue";
   const arrayColores=["blue","red","peru"];
   const activo=true;
+  const arrayFrutaas=
 
 </script>
 
