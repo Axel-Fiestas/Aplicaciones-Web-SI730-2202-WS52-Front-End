@@ -158,9 +158,9 @@
                   <pv-InputSwitch v-model="checked"/>
                 </div>
 
-              </div><!--Termina Estado---->
+              </div><!--Termina Afecto a impuesto---->
 
-
+              
 
 
 
