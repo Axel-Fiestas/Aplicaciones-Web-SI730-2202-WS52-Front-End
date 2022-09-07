@@ -10,6 +10,8 @@ import ColorPicker from 'primevue/colorpicker';
 import Calendar from 'primevue/calendar';
 import RadioButton from 'primevue/radiobutton';
 import InputSwitch from 'primevue/inputswitch';
+import FileUpload from 'primevue/fileupload';
+import Textarea from 'primevue/textarea';
 import './assets/main.css'
 import '/node_modules/primeflex/primeflex.css' 
 import 'primevue/resources/themes/saga-green/theme.css'       
@@ -29,6 +31,8 @@ app.component('pv-ColorPicker',ColorPicker);
 app.component('pv-Calendar',Calendar);
 app.component('pv-RadioButton',RadioButton);
 app.component('pv-InputSwitch',InputSwitch);
+app.component('pv-FileUpload',FileUpload);
+app.component('pv-Textarea',Textarea);
 
 
 

@@ -16,7 +16,8 @@
         color1:'444445',
         date1:null,
         estado:null,
-        checked:false
+        checked:false,
+        text:''
 
         }
           
@@ -160,7 +161,48 @@
 
               </div><!--Termina Afecto a impuesto---->
 
-              
+
+              <!--Foto-->
+              <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
+
+                <label for="foto" class="col-fixed" style="width:150px">Foto*</label>
+                <div class="col" style="display: flex; align-items: center;">
+                  <pv-FileUpload id="foto" mode="basic" name="demo[]" url="./upload" chooseLabel="Subir Foto" accept="image/*" style="width: 145px; height: 40px;"/>
+                  <i class="pi pi-image" style="margin-inline: 20px;font-size: 3rem"></i>
+                </div>
+
+              </div><!--Termina Foto---->
+
+              <!--Descripción-->
+                <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
+
+                <label for="descripcion" class="col-fixed" style="width:150px">Descripción</label>
+                <div class="col">
+                  
+                  <pv-Textarea id="descripcion" v-model="text" :autoResize="true" rows="1" cols="30" />
+                </div>
+
+              </div><!--Termina Descripción---->
+
+              <!--Botones-->
+
+              <div class="card">
+                <div class="flex justify-content-center flex-wrap card-container">
+
+                    <div class="flex align-items-center justify-content-center w-7rem h-4rem font-bold text-gray-900 border-round m-2">
+                      <pv-Button label="Grabar" class="p-button-raised" />
+                    </div>
+                    <div class="flex align-items-center justify-content-center w-7rem h-4rem font-bold text-gray-900 border-round m-2">
+                      <pv-Button label="Limpiar" class="p-button-raised p-button-danger" />
+                    </div>
+                </div>
+
+
+              </div>
+
+
+
+
 
 
 
