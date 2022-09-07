@@ -14,7 +14,9 @@
 		          ],
         value1: 0,
         color1:'444445',
-        date1:null
+        date1:null,
+        estado:null,
+        checked:false
 
         }
           
@@ -124,16 +126,40 @@
             
               </div><!--Termina Color de etiqueta---->
 
-              
+
               <!--Fecha-->
               <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
 
                 <label for="fecha" class="col-fixed" style="width:140px">Fecha*</label>
                 <div class="col">
-                  <pv-Calendar v-model="date1" :showIcon="true" />
+                  <pv-Calendar id="fecha" v-model="date1" :showIcon="true" />
                 </div>
 
               </div><!--Termina Fecha---->
+              
+
+              <!--Estado-->
+              <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
+
+                <label for="estado" class="col-fixed" style="width:140px">Fecha*</label>
+                <div class="col">
+                  <pv-RadioButton name="estado" value="Activo" v-model="estado" /><label for="estado" style="margin-inline: 5px;">Activo</label>
+                  <pv-RadioButton name="estado" value="Suspendido" v-model="estado" /><label for="estado" style="margin-inline: 5px;">Suspendido</label>
+                  <pv-RadioButton name="estado" value="De Baja" v-model="estado" /><label for="estado" style="margin-inline: 5px;">De Baja</label>
+                </div>
+
+              </div><!--Termina Estado---->
+
+              <!--Afecto a impuesto-->
+              <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
+
+                <label for="estado" class="col-fixed" style="width:150px">Afecto a impuesto*</label>
+                <div class="col">
+                  <pv-InputSwitch v-model="checked"/>
+                </div>
+
+              </div><!--Termina Estado---->
+
 
 
 
