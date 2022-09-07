@@ -57,7 +57,6 @@
       <label for="price" class="col-12 mb-2 md:col-2 md:mb-0">Precio*</label>
 
       <div class="col-12 md:col-10">
-
         <InputNumber v-model="value3" mode="decimal" showButtons buttonLayout="vertical"
             decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"></InputNumber>
 
