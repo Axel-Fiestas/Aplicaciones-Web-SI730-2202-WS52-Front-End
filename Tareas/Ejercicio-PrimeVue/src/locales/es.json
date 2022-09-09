@@ -1,0 +1,7 @@
+{
+    "code":"Código",
+    "number":"Número",
+    "abbreviation":"Abreviatura",
+    "greeting": "Hola, {name}",
+    "product":"ningun producto| un producto | productos "
+}

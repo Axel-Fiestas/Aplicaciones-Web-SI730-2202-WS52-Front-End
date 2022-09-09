@@ -26,7 +26,6 @@
 
   }
 
-    
 
 
 </script>
@@ -34,6 +33,8 @@
 <template>
 
   <form >
+
+    <h1>{{$t("greeting",{name:"Pedro"})}}</h1>
 
     <fieldset>
 
@@ -45,7 +46,7 @@
               <!--Codigo-->
                 <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
 
-                  <label for="code" class="col-fixed" style="width:140px">Código*</label>
+                  <label for="code" class="col-fixed" style="width:140px">{{$t("code")}}*</label>
                     <div class="col">
                       <input id="code" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none  outline-none         focus:border-primary" style="width: 150px;">
                       <pv-Button label="Validar" class="p-button-raised p-button-sm " style="margin-inline: 10px;"/>
@@ -58,9 +59,9 @@
 
                 <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
 
-                  <label for="name" class="col-fixed" style="width:140px">Nombre*</label>
+                  <label for="number" class="col-fixed" style="width:140px">{{$t("number")}}*</label>
                   <div class="col">
-                    <input id="name" type="text" placeholder="Solo letras y números" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary"  style="width: 280px;">
+                    <input id="number" type="text" placeholder="Solo letras y números" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary"  style="width: 280px;">
                   </div>
                   
                 </div><!--Termina-Número---->
@@ -72,16 +73,15 @@
 
                 <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
 
-                  <label for="abreviatura" class="col-fixed" style="width:140px">Abreviatura</label>
+                  <label for="abbreviation" class="col-fixed" style="width:140px">{{$t("abbreviation")}}</label>
                   <div class="col">
-                    <pv-InputMask id="abreviatura" v-model="value" placeholder="Solo letras" mask="aaa" class="text-base text-color surface-overlay p-2 border-1  border-solid surface-border border-round appearance-none outline-none  focus:border-primary" style="width: 120px;"/>
+                    <pv-InputMask id="abbreviation" v-model="value" placeholder="Solo letras" mask="aaa" class="text-base text-color surface-overlay p-2 border-1  border-solid surface-border border-round appearance-none outline-none  focus:border-primary" style="width: 120px;"/>
                   </div>
 
                 </div><!--Termina-Abreviatura---->
 
               
-            
-
+          
               <!--Categoría-->
 
               <div class="flex align-items-center justify-content-center w-27rem h-3rem font-bold text-white border-round m-1">
@@ -202,6 +202,12 @@
 
             </div>
         </div>
+
+
+
+        <h2>
+          {{$tc("product",0)}}
+        </h2>
 
       
 

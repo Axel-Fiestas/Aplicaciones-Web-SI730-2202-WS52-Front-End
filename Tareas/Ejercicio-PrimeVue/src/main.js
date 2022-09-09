@@ -16,12 +16,17 @@ import './assets/main.css'
 import '/node_modules/primeflex/primeflex.css' 
 import 'primevue/resources/themes/saga-green/theme.css'       
 import 'primevue/resources/primevue.min.css'      
-import 'primeicons/primeicons.css'       
+import 'primeicons/primeicons.css'
+
+
+
+import i18n from './locales/i18n';
 
 
 const app = createApp(App);
-
 app.use(PrimeVue);
+app.use(i18n); //Inyectar
+
 app.component('pv-Button', Button);
 app.component('pv-InputMask',InputMask);
 app.component('pv-MultiSelect',MultiSelect);
