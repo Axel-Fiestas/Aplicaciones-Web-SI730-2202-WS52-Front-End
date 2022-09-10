@@ -1,4 +1,10 @@
 app.component('product-display',{
+    props:{
+        premium:{
+            type:Boolean,
+            required:true
+        }
+    },
 
     template:
     /*html*/
@@ -18,10 +24,10 @@ app.component('product-display',{
 
                <p v-if="inStock">In Stock</p>
                <p v-else>Out of Stock</p>
-
-              <ul>
-                  <li v-for="detail in details"> {{detail}}</li>
-              </ul>
+               
+               <p>Shipping: {{shipping}}</p>
+                             
+               <product-details :details="details"></product-details>
 
               <div
                       v-for="(variant,index) in variants"
@@ -45,6 +51,7 @@ app.component('product-display',{
 
         </div>
       </div>
+     
     `,
     data(){
         return {
@@ -54,7 +61,7 @@ app.component('product-display',{
             selectedVariant:0,
             description:"Perfect clothes and sucks",
             url:'https://amoramedias.pe',
-            details:['50% cotton','30% wool',"'20% polyester"],
+            details:['50% cotton','30% wool',"20% polyester"],
             variants:[
                 {id:2234,color:'green',size:'small',image:'assets/images/socks_green.jpg',quantity:50},
                 {id:2235,color:'blue',size:'medium',image:'assets/images/socks_blue.jpg',quantity:0}
@@ -87,6 +94,12 @@ app.component('product-display',{
         },
         Sale(){
             return this.brand+this.product+" is on sale";
+        },
+        shipping(){
+            if(this.premium){
+                return "Free";
+            }
+            return 2.99;
         }
     }
 
