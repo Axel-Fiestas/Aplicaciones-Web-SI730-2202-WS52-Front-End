@@ -52,6 +52,10 @@ app.component('product-display',{
           </div>
 
         </div>
+        
+        <review-list v-if="reviews.length" :reviews="reviews"></review-list> 
+        <review-form @review-submitted="addReview"></review-form>
+        
       </div>
      
     `,
@@ -68,18 +72,22 @@ app.component('product-display',{
                 {id:2234,color:'green',size:'small',image:'assets/images/socks_green.jpg',quantity:50},
                 {id:2235,color:'blue',size:'medium',image:'assets/images/socks_blue.jpg',quantity:0}
             ],
+            reviews:[]
 
         }
     },
     methods:{
         addToCart() {
-            this.$emit('add-to-cart')
+            this.$emit('add-to-cart',this.variants[this.selectedVariant].id)
         },
         updateVariant(index){
             this.selectedVariant=index;
         },
         quitToCart(){
             this.$emit('quit-to-cart')
+        },
+        addReview(review){
+            this.reviews.push(review);
         }
     },
     computed:{
