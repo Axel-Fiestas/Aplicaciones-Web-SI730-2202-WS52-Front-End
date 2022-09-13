@@ -78,3 +78,17 @@ Puede usar v-bind en muchos atributos diferentes, no solo en la clase
     getClass(number){
         return this.isEven(number) ? 'blue' : 'red'
     }
+
+
+#V MODEL
+    <input
+    type="radio"
+    v-model="value"
+    value="a"
+    />
+
+    <input
+    type="radio"
+    v-model="value"
+    value="b"
+    />

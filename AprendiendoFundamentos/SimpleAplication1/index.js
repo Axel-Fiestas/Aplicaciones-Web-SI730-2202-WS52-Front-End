@@ -1,15 +1,44 @@
 
+const Hello={
+    template: `
+    <p>Hello!</p>
+    `,
+
+}
+
 const app= Vue.createApp({
+
+    components:{
+        Hello
+    },
+
     template:
     `
-
-    <input v-bind:value="value"
-    v-on:input="input"
-    >
-    {{value}}
+    <Hello></Hello>
     
     <button v-on:click="increment()">Increment</button>
     <p>{{count}}</p>
+    
+    <input 
+    type="radio"
+    v-model="value"
+    value="a"
+    />
+    
+    <input 
+    type="radio"
+    v-model="value"
+    value="b"
+    />
+    
+    {{value}}
+    
+    <div class="red"> 
+        {{error}}
+    </div>
+    
+    
+
     
     <div v-for="number in numbers" 
         v-bind:class="getClass(number)">
@@ -23,16 +52,20 @@ const app= Vue.createApp({
     `,
 
     data(){
-        return{
-            count:0,
-            numbers:[1,2,3,4,5,6,7,8,9],
-            value:"user",
-            error:''
+        return {
+            count: 0,
+            numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            value: "a"
         }
     },
     computed:{
         evenList(){
             return this.numbers.filter(num=>this.isEven(num));
+        },
+        error(){
+            if(this.value.length<5){
+                return 'Must be greater than 5'
+            }
         }
     },
     methods:{
@@ -45,12 +78,7 @@ const app= Vue.createApp({
         getClass(number){
             return this.isEven(number) ? 'blue' : 'red'
         },
-        input($event){
-           this.value=$event.target.value
-            if(this.value.length<5){
-                this.error='Must be greater than 5'
-            }
-        }
+
     },
 
     script:
