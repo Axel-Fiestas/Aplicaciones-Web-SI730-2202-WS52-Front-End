@@ -1,0 +1,80 @@
+Código que sirve como recordatorio
+
+<p>{{count}}</p>
+#{{}} -> accedes a la data , como si fuera una variable
+
+
+<button v-on:click="increment()">Increment</button>
+#v-on  -> Su función es llamar a un evento y pasarle una funcion, es comun
+verlo en formato javascript pero aquí es un tanto diferente, estos reciben
+métodos como parametros, osea que "increment()" es un parametro
+
+
+this.count
+#this -> Sirve para hacer referencia a la data actual
+
+
+<div v-if="isEven(count)">
+#v-if -> Si se cumple la condición , pasa tal  cosa . No es complicado
+
+
+
+<div v-if="isEven(count)">
+    Even
+</div>
+<div v-else>
+    Odd
+</div>
+
+#v-else -> Si no se cumple la condición principal , pasa al else
+
+
+
+<div v-for="number in numbers">
+    <div>
+    {{number}}
+    </div>
+</div>
+
+#v-for : Funciona muy parecido a como es en python , number es el dato
+a mostrar y "numbers" la data
+
+
+
+#computed properties : Una propiedad calculada es
+básicamente datos derivados, a menudo será un
+subconjunto de algunos datos existentes.
+
+Ejemplo:
+        evenList(){
+            return this.numbers.filter(num=>this.isEven(num));
+        }
+
+
+
+#Update class: Actualizar clases u atributos  V-BIND
+
+Puede usar v-bind en muchos atributos diferentes, no solo en la clase
+
+    <div v-for="number in numbers"
+        v-bind:class="isEven(number) ? 'blue' : 'red' ">
+        <div>
+        {{number}}
+        </div>
+    </div>
+
+
+    #Aunque esto funciona, no es lo mejor ,ya que se debe procurar
+    que el template este en su mayoría limpio para que este sea
+    un código mantenible, por lo que haremos un método
+
+    <div v-for="number in numbers"
+            v-bind:class="getClass(number)">
+            <div>
+            {{number}}
+            </div>
+        </div>
+
+    getClass(number){
+        return this.isEven(number) ? 'blue' : 'red'
+    }
