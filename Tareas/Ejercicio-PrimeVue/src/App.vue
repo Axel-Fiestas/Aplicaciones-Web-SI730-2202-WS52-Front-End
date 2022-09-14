@@ -1,5 +1,7 @@
 <script>
 
+  import {CommentsServices} from "@/services/coments-services";
+
   export default{
     data() {
 	    return{
@@ -20,7 +22,19 @@
         text:''
 
         }
-      }
+      },
+    created(){
+      new CommentsServices().getComments().then(response=>{
+        console.log(response.status);
+        console.log(response.data);
+      })
+    },
+    unmounted() {
+
+    },
+    mounted() {
+
+    }
 
   }
 
