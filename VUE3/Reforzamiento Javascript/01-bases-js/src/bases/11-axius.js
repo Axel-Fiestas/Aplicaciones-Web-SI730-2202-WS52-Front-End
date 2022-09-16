@@ -16,15 +16,29 @@ const giphyApi= axios.create({
 
 
 
-//Manera instructor
+//Mi forma (mala xd)
 // giphyApi.get('/random')
 // .then(resp=>{
 
-//     const { data }=resp.data
-//     const { url  }=data.images.original
+//     console.log(resp.data.data)
+
+//     const {url}=resp.data.data.images.original
 
 //     const img=document.createElement("img")
 //     img.src=url
 //     document.body.append(img)
 
 // })
+
+//Manera instructor
+giphyApi.get('/random')
+.then(resp=>{
+
+    const { data }=resp.data
+    const { url  }=data.images.original
+
+    const img=document.createElement("img")
+    img.src=url
+    document.body.append(img)
+
+})
