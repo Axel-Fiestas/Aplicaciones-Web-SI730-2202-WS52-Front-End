@@ -14,7 +14,7 @@ const giphyApi= axios.create({
     }
 })
 
-
+export default giphyApi
 
 //Mi forma (mala xd)
 // giphyApi.get('/random')
