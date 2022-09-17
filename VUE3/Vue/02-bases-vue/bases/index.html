@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Intro</title>
+      
+    <script type="module" src="app.js"></script>
+    
+
+</head>
+<body>
+    
+    <!--Control absoulto de este Div-->
+    <div id="app">
+
+
+        <h1> {{quote}} </h1>
+        <p> {{ message }} </p>
+        <p>{{autor}}</p>
+
+        <button v-on:click="changeQuote">
+            Change Quote
+        </button>
+
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
