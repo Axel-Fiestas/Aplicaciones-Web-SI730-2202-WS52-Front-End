@@ -19,7 +19,10 @@ export default {
         start: {
             type:Number,
             //required: true,
-            default:100
+            default:100,
+            validator(value){
+                return value >= 0
+            }
         }
     },
     //name:'Patito onicha',
