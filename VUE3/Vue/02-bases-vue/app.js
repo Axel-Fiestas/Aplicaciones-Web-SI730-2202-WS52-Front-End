@@ -9,7 +9,7 @@ createApp({
     // ,
     data() {
       return {
-        quote:"Im batman",
+        quote:"There's seems to be a lad",
         message: 'Hola mundo!!!',
         autor:"Bruce Wayne"
       }
@@ -17,6 +17,11 @@ createApp({
     methods: {
       changeQuote(){
         console.log("Hola mundo")
+        this.autor="Axel fiestas"
+        this.capitalize()
+      },
+      capitalize(){
+        this.quote=this.quote.toUpperCase()
       }
     },
   }).mount('#app')
