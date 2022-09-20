@@ -5,7 +5,7 @@
   export default{
     data() {
 	    return{
-
+        comments:[],
 		    selectedLacteos: null,
 		      lacteos: [
 			      {tipo: 'Leche', value: 'Leche'},
@@ -24,9 +24,12 @@
         }
       },
     created(){
-      new CommentsServices().getComments().then(response=>{
+      new CommentsServices().getComments().
+      then(response=>{
+        console.log("invocando API")
         console.log(response.status);
         console.log(response.data);
+        this.comments=response.data;
       })
     },
     unmounted() {
@@ -195,6 +198,28 @@
                 </div>
 
               </div><!--Termina Descripción---->
+
+
+                <!--Comentarios-->
+              <div class="field grid">
+              
+                <label for="category" class="col-3 mb-2">Comentarios*</label>
+
+                <div class="col-9 p-0"> <pv-dropdown
+
+                  id="comment"
+
+                  :options="comments"
+
+                  optionLabel="body"
+
+                  placeholder="Select a comment"
+
+                  class="w-full"
+
+                ></pv-dropdown></div>
+
+              </div> 
 
               <!--Botones-->
 
