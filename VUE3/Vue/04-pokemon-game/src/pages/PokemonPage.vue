@@ -3,7 +3,7 @@
     <h1>¿Quién es este pokemon?</h1>
 
     <!-- Img   -->
-    <PokemonPicture :pokemonId="4"/>
+    <PokemonPicture :pokemonId="4" :showPokemon="true"/>
 
     <!-- Opciones    -->
     <PokemonOptions />

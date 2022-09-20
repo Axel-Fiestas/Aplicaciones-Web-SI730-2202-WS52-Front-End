@@ -7,7 +7,9 @@ import PokemonOptions from '@/components/PokemonOptions.vue';
         class="hidden-pokemon"
         alt="pokemon">
 
-    <img :src="imgSrc"
+    <img
+        v-if="showPokemon" 
+        :src="imgSrc"
         class="fade-in"
         alt="pokemon">
 
@@ -25,6 +27,11 @@ export default {
         pokemonId:{
             type:Number,
             required:true
+        },
+        showPokemon:{
+            type:Boolean,
+            required:true,
+            default:false
         }
     },
     // data(){
