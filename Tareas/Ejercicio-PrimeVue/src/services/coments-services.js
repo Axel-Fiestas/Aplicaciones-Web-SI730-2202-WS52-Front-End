@@ -16,5 +16,12 @@ export class CommentsServices {
 
     }
 
+
+    deleteComment(id) {
+
+        return axios.delete("localhost:3000/comments/" + id);
+    
+    }
+
 }
 

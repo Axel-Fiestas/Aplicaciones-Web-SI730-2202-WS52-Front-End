@@ -1,11 +1,15 @@
 <script>
 
   import {CommentsServices} from "@/services/coments-services";
+import func from 'vue-editor-bridge';
 
   export default{
     data() {
 	    return{
         comments:[],
+        body:"",
+        postId:"",
+        commentId:"",
 		    selectedLacteos: null,
 		      lacteos: [
 			      {tipo: 'Leche', value: 'Leche'},
@@ -32,15 +36,23 @@
         this.comments=response.data;
       })
     },
-    unmounted() {
+    methods:{
+      createComment:function(){
 
+        new CommentsServices().postComment(this.body,this.postId)
+          .then(response=>{
+            console.log("postComment",response)
+          })
+      }
     },
-    mounted() {
-
+    deleteComment: function(){
+      new CommentsServices().deleteComment(this.commentId)
+        .then(response=>{
+          console.log("postComment",response)
+        })
     }
 
   }
-
 
 
 </script>
@@ -234,7 +246,17 @@
 
               </div>
 
+              <label class="col-3 mb-2" for="commentId">IdEliminar</label>
+              <div class="col-7 p-0">
+                <pv-InputMask id="commentId" v-model="commentId"/> 
+
+              </div>
+
               <pv-Button @click="createComment">Crear Post </pv-Button>
+              <pv-Button @click="deleteComment">Borrar Post</pv-Button>
+
+
+
 
 
               <!--Botones-->
