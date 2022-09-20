@@ -221,6 +221,22 @@
 
               </div> 
 
+
+              <label class="col-3 mb-2" for="body">Cuerpo</label>
+              <div class="col-7 p-0">
+                <pv-InputMask id="body" v-model="body"/> 
+
+              </div>
+
+              <label class="col-3 mb-2" for="postId">postId</label>
+              <div class="col-7 p-0">
+                <pv-InputMask id="postId" v-model="postId"/> 
+
+              </div>
+
+              <pv-Button @click="createComment">Crear Post </pv-Button>
+
+
               <!--Botones-->
 
               <div class="card">
