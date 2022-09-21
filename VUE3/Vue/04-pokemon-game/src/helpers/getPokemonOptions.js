@@ -1,6 +1,6 @@
 import pokemonApi from '../api/PokemonApi'
 
-const getPokemons =()=>{
+export const getPokemons =()=>{
 
     const pokemonsArr= Array.from(Array(650)) //Crea un arreglo con 650 posiciones vacías
     
@@ -21,7 +21,7 @@ const getPokemonOptions=async()=>{
 
 }
 
-const getPokemonNames=async( [a,b,c,d]=[] )=>{
+export const getPokemonNames=async( [a,b,c,d]=[] )=>{
 
     // const respuesta= await pokemonApi.get(`/2`)
     // console.log(respuesta.data.name,respuesta.data.id)
