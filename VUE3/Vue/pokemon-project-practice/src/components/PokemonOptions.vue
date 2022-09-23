@@ -2,17 +2,14 @@
 
     <h1>Aquí van las 4 opciones</h1>
     <ul>
-        <li><button>1</button></li>
-        <li><button>2</button></li>
-        <li><button>3</button></li>
-        <li><button>4</button></li>
+        <button v-for="pokemon in pokemons" 
+        :key="pokemon.id"
+        @click="$emit('selectionPokemon',pokemon.id)">
+            {{pokemon.name}}
+        </button>
 
     </ul>
 
-
-    <ul>
-        {{name}}
-    </ul>
 
 
 </template>
@@ -22,30 +19,15 @@ import axios from 'axios'
 
 export default {
     props:{
-        pokemonId:{
-            type:Number,
+        pokemons:{
+            type:Array,
             required:true
         }
     },
     data(){
         return{
-            name:""
+            
         }
-    },
-    computed:{
-        getName(){
-            return `https://pokeapi.co/api/v2/pokemon/${this.pokemonId}`
-        }
-    },
-    mounted(){
-
-        //Tengo que recibir 4 entradas de pokemones mediante el get 
-        //Luego de eso tengo que enviar la data
-        axios
-        .get(this.getName) 
-        .then(response=>{
-            this.name=response.data.species.name
-        })
     }
 }
 </script>
