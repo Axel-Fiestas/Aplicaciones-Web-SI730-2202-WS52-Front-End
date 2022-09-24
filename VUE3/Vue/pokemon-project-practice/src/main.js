@@ -14,7 +14,10 @@ import 'primevue/resources/themes/saga-blue/theme.css'       //theme
 import 'primevue/resources/primevue.min.css'                 //core css
 import 'primeicons/primeicons.css'                            //icons
 
+import router from './router.js'
 
+  
+app.use(router)
 app.component('InputText',InputText)
 app.component('Button',Button)
 app.component('Dropdown', Dropdown);

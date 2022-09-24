@@ -21,7 +21,6 @@
       <button @click="newGame">{{$t("New Game")}}</button>
     </div>
 
-    <Example />
 
     
 </template>

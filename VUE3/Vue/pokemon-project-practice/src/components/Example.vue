@@ -50,7 +50,7 @@ export default {
         CreatePokemon(){
             new PokemonApi().postPokemons(this.name,this.type).
             then(response=>{
-                console.log("Pokemon Creado",response)
+                console.log("Pokemon Creado",response) 
             })
         },
 
