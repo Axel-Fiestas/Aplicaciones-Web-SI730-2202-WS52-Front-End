@@ -15,7 +15,7 @@
 
     <div v-if="showMessage">
 
-      <p>{{$t("")}}</p>
+      <p>{{$t(message)}} {{pokemon.name}}</p>
       <button @click="newGame">{{$t("New Game")}}</button>
     </div>
 
@@ -52,9 +52,9 @@ export default {
 
 
       if(pokemonId===this.pokemon.id){
-        this.message=`$t("Right!, is") ${this.pokemon.name}`
+        this.message="Right!,is"//+`${this.pokemon.name}`
       }else{
-        this.message=`$t("Sorry, is") ${this.pokemon.name}`
+        this.message="Sorry,is"//+`${this.pokemon.name}`
       }
     },
     newGame(){
