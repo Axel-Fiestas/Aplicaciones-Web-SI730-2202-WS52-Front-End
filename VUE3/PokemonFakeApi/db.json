@@ -1,0 +1,11 @@
+{
+  "pokemons": [
+    { "id": 1, "name": "pikachu", "type": "electro"},
+    {"id": 2, "name": "bulbasor", "type": "aqua"},
+    {"id": 3, "name": "lucario", "type": "earth"}
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
