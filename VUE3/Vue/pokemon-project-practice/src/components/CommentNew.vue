@@ -13,8 +13,8 @@
         <div class="field grid">
             
             <label for="postId">Id Post</label>
-            <InputText id="postId" type="text" v-model="postIdNew" />
-        
+            <Dropdown v-model="selectedPost"  :options="posts" optionLabel="title" placeholder="Select a postId" />
+
         </div>
 
         <Button @click="Save">Save</Button>
@@ -25,23 +25,35 @@
 
 <script>
 import CommentServices from '../api/commentService.js'
+import PostServices from '../api/postService.js'
 
 
 export default {
     data(){
         return{
             bodyNew:'',
-            postIdNew:''
+            selectedPost:'',
+            posts:null
         }
     },
     methods:{
         Save(){
-            new CommentServices().postComment(this.bodyNew,this.postIdNew)
+            debugger
+            new CommentServices().postComment(this.bodyNew,this.selectedPost.id)
             .then(()=>{
                 console.log("Comentario correctamente grabado")
+                this.$router.push('/Comment')
             })
         }
-    }
+    },
+    created() {
+        new PostServices().getPost().
+        then(response=>{
+            this.posts=response.data
+            console.log("Creado correctamente")
+        }) 
+        
+    },
 }
 </script>
 

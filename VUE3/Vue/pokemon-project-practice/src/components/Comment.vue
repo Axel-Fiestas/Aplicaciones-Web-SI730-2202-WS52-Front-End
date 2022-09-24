@@ -10,7 +10,15 @@
 
         <Column field="id" header="Id"></Column>
         <Column field="body" header="Body"></Column>
-        <Column field="postId" header="Post Id"></Column>
+        <Column field="postId" header="Post Id">
+            <template #body="slotProps">
+            <Button @click="deleteComment(slotProps.data.id)">Eliminar</Button>
+            </template>
+
+        </Column>   
+
+
+        
 
     </DataTable>
 </template>
@@ -22,6 +30,11 @@ export default {
     data(){
         return{
             comments:null
+        }
+    },
+    methods:{
+        deleteComment(id){
+            new commentService().deleteComment(id)
         }
     },
     created()

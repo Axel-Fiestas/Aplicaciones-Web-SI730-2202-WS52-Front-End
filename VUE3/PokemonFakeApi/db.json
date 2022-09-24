@@ -35,11 +35,6 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
       "id": 2,
       "body": "Eso tilín",
       "postId": 2
@@ -53,6 +48,30 @@
       "body": "Hola este es un comentario de prueba",
       "postId": "25",
       "id": 4
+    },
+    {
+      "body": "XD",
+      "postId": {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      },
+      "id": 5
+    },
+    {
+      "body": "numero2 orueba",
+      "postId": 1,
+      "id": 6
+    },
+    {
+      "body": "Numero 3",
+      "postId": 1,
+      "id": 7
+    },
+    {
+      "body": "Comentario de prueba N°10 xd",
+      "postId": 1,
+      "id": 8
     }
   ],
   "profile": {
