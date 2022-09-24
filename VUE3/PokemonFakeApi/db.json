@@ -1,11 +1,39 @@
 {
   "pokemons": [
-    { "id": 1, "name": "pikachu", "type": "electro"},
-    {"id": 2, "name": "bulbasor", "type": "aqua"},
-    {"id": 3, "name": "lucario", "type": "earth"}
+    {
+      "name": "Bolbasor",
+      "type": "Aqua",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "lucario",
+      "type": "earth"
+    },
+    {
+      "name": "Lunaria",
+      "type": "fire",
+      "id": 4
+    },
+    {
+      "name": "Charmander",
+      "type": "Fire",
+      "id": 5
+    },
+    {
+      "name": "Pikachu",
+      "type": "Electro",
+      "id": 6
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

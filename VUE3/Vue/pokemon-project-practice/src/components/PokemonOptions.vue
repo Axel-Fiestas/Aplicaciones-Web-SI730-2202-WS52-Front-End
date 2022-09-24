@@ -10,8 +10,6 @@
 
     </ul>
 
-
-
 </template>
 
 <script>
