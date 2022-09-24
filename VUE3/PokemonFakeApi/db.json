@@ -26,7 +26,7 @@
       "id": 6
     }
   ],
-  "Post":[
+  "post": [
     {
       "id": 1,
       "title": "json-server",
@@ -38,6 +38,21 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "Eso tilín",
+      "postId": 2
+    },
+    {
+      "id": 3,
+      "body": "Guao tilín",
+      "postId": 3
+    },
+    {
+      "body": "Hola este es un comentario de prueba",
+      "postId": "25",
+      "id": 4
     }
   ],
   "profile": {
