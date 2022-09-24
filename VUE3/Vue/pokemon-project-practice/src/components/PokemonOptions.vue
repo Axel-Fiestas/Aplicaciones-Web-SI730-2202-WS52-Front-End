@@ -1,6 +1,6 @@
 <template>
 
-    <h1>Aquí van las 4 opciones</h1>
+    <h1>{{$t("Options")}}</h1>
     <ul>
         <button v-for="pokemon in pokemons" 
         :key="pokemon.id"

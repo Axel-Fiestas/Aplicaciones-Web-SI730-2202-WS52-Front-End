@@ -1,12 +1,12 @@
 <template>
 
     <div v-if="!pokemon">
-        <h1>Por favor espere...</h1>
+        <h1>{{$t("Please Wait")}}...</h1>
       </div>
 
     <div v-else>
 
-      <h1>Who is this Pokemon?</h1>
+      <h1>{{$t("Why are this pokemon?")}}</h1>
       <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
       <PokemonOptions :pokemons="arrPokemons"
       @selectionPokemon="checkAnswer"/>
@@ -15,8 +15,8 @@
 
     <div v-if="showMessage">
 
-      <p>{{message}}</p>
-      <button @click="newGame">Nuevo Juego</button>
+      <p>{{$t("")}}</p>
+      <button @click="newGame">{{$t("New Game")}}</button>
     </div>
 
     
@@ -52,9 +52,9 @@ export default {
 
 
       if(pokemonId===this.pokemon.id){
-        this.message=`Correcto!, era ${this.pokemon.name}`
+        this.message=`$t("Right!, is") ${this.pokemon.name}`
       }else{
-        this.message=`Será para la próxima, era ${this.pokemon.name}`
+        this.message=`$t("Sorry, is") ${this.pokemon.name}`
       }
     },
     newGame(){
