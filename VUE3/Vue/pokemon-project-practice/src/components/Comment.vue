@@ -17,9 +17,6 @@
 
         </Column>   
 
-
-        
-
     </DataTable>
 </template>
 

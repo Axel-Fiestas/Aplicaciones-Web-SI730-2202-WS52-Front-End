@@ -31,14 +31,14 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "title": "El lado oscuro",
+      "author": "Santiago Bernardez",
+      "id": 2
     }
   ],
   "comments": [
-    {
-      "id": 2,
-      "body": "Eso tilín",
-      "postId": 2
-    },
     {
       "id": 3,
       "body": "Guao tilín",
@@ -48,15 +48,6 @@
       "body": "Hola este es un comentario de prueba",
       "postId": "25",
       "id": 4
-    },
-    {
-      "body": "XD",
-      "postId": {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      },
-      "id": 5
     },
     {
       "body": "numero2 orueba",
