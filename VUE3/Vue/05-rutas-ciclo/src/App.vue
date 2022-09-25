@@ -1,16 +1,25 @@
 <script>
+import {defineAsyncComponent} from 'vue'
+
 
 export default {
   // name:'App',
-  // components:{}
+  components:{
+    NavBar: defineAsyncComponent( ()=> import(/*webpackChunkName:"Navbar"*/'./modules/shared/components/Navbar.vue'))
+  }
 }
+// import NavBar2 from './modules/shared/components/Navbar.vue'
  
 </script>
 
 <template>
+
+<NavBar />
 <router-view></router-view>
 
 </template>
+
+
 
 <style scoped>
 /* header {
