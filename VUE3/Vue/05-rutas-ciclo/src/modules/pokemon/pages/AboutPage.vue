@@ -5,7 +5,7 @@
 <script>
 export default {
     setup(){
-        
+        console.log("beforeCreate")
     },
     beforeCreate(){},
     created(){},
