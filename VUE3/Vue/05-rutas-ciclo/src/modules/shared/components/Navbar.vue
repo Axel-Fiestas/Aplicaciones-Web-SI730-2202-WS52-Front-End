@@ -25,4 +25,8 @@ div a{
     color:#2c3e50;
     margin:0 10px;
 }
+
+a.router-link-exact-active{
+  color:#ca5823
+}
 </style>

@@ -5,7 +5,6 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 // import PokemonPage from '../modules/pokemon/pages/PokemonPage.vue'
 // import NoPageFound from '../modules/shared/pages/NoPageFound.vue'
 //Para evitar cargar de golpe todo usaremos Lazy Load o carga perezosa
-
 /*Lazy Load*/ //Una carga inicial pequeña para que las demás páginas
 //vayan cargandose según lo requiera 
 
@@ -19,7 +18,7 @@ const routes = [
     component: ()=> import(/*webpackChunkName:AboutPage*/'../modules/pokemon/pages/AboutPage.vue')
   },
   { 
-    path: '/id', 
+    path: '/:id', 
     component: ()=>import(/*webPackChunkName:PokemonPage*/'../modules/pokemon/pages/PokemonPage.vue')
   },
   { 
