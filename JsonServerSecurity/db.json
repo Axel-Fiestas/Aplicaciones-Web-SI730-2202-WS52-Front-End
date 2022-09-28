@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "post2",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "post3",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "comment4",
+      "postId": "2"
+    },
+    {
+      "id": 2,
+      "body": "222222",
+      "postId": "3"
+    },
+    {
+      "id": 3,
+      "body": "new comment 7",
+      "postId": "2"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "email": "user1@mail.com",
+      "password": "$2a$10$tcdo3WlqhkNVUN/hpqwR4.A39.UU1ZoE9rtZcJiF6uBySzvjyLxrC",
+      "id": 1
+    },
+    {
+      "email": "axe@gmail.com",
+      "password": "$2a$10$DMrpZ7o8wJVm5UiI3ECgwOv.JZX5lEqNTe6Vz2AgHo0MKEG3YDKry",
+      "id": 2
+    }
+  ]
+}
